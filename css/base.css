@@ -1,0 +1,42 @@
+/* BASE: palet, font, tombol, navigasi. Ganti warna dan font di :root */
+@font-face{font-family:"Avenir File";src:url("../assets/fonts/avenir-book.woff2") format("woff2");font-weight:400}
+@font-face{font-family:"Avenir File";src:url("../assets/fonts/avenir-heavy.woff2") format("woff2");font-weight:700}
+:root{
+  --navy:#384B70; --cream:#FCFAEE; --teal:#507687;
+  --surface:#F4F1E1; --line:#DEDAC4; --tint:rgba(80,118,135,.14); --radius:10px;
+  --font:"Avenir File","Avenir","Avenir Next","Nunito Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font:400 1rem/1.7 var(--font);color:var(--navy);background:var(--cream)}
+img{max-width:100%;display:block}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+h1,h2,h3,h4{font-weight:700;line-height:1.2}
+h2{font-size:2rem;margin-bottom:1.6rem}
+h2::after{content:"";display:block;width:56px;height:4px;margin-top:.6rem;background:var(--teal);border-radius:2px}
+h3{font-size:1.15rem}
+.wrap{max-width:980px;margin:0 auto;padding:4.5rem 1.25rem 1rem}
+.hint,.muted{color:var(--teal)}
+.hint{margin:-.8rem 0 1.4rem}
+.btn{display:inline-block;padding:.65rem 1.25rem;border-radius:var(--radius);border:2px solid var(--navy);font:700 .95rem var(--font);text-decoration:none;background:var(--navy);color:var(--cream);cursor:pointer}
+.btn.alt{background:transparent;color:var(--navy)}
+.btn:hover{background:var(--teal);border-color:var(--teal);color:var(--cream)}
+
+.nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:.7rem 1.25rem;background:rgba(252,250,238,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.brand{font-weight:800;font-size:1.2rem;text-decoration:none;color:var(--navy)}
+.nav nav{display:flex;gap:1.4rem}
+.nav nav a{text-decoration:none;color:var(--teal);font-weight:700;font-size:.95rem;padding:.2rem 0;border-bottom:2px solid transparent}
+.nav nav a:hover,.nav nav a.on{color:var(--navy);border-color:var(--navy)}
+.burger{display:none;background:none;border:0;padding:.5rem;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:var(--navy);margin:5px 0}
+.foot{text-align:center;padding:2rem 1rem;color:var(--teal);font-size:.9rem}
+
+@media(max-width:720px){
+  .burger{display:block}
+  .nav nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--cream);border-bottom:1px solid var(--line)}
+  .nav nav.open{display:flex}
+  .nav nav a{padding:.9rem 1.25rem;border:0;border-top:1px solid var(--line)}
+  .wrap{padding-top:3.5rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

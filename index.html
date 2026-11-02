@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hafizhah Farah Fadhila | System Analysis & QA</title>
+<meta name="description" content="Portofolio Hafizhah Farah Fadhila, lulusan Sistem Informasi Universitas Telkom di bidang System Analysis dan Quality Assurance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#beranda">Hafizhah</a>
+  <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><span></span><span></span></button>
+  <nav id="menu">
+    <a href="#tentang">Tentang</a><a href="#kompetensi">Kompetensi</a><a href="#proyek">Proyek</a>
+    <a href="#pengujian">Pengujian</a><a href="#pengalaman">Pengalaman</a><a href="#kontak">Kontak</a>
+  </nav>
+</header>
+<main>
+  <section id="beranda" class="wrap hero"></section>
+  <section id="tentang" class="wrap"><h2>Tentang saya</h2><div id="about"></div></section>
+  <section id="kompetensi" class="wrap"><h2>Kompetensi</h2><div id="skills"></div></section>
+  <section id="proyek" class="wrap"><h2>Proyek pilihan</h2><p class="hint">Pilih satu proyek untuk melihat studi kasus lengkap, video, dan dokumentasinya.</p><div class="grid" id="projects"></div></section>
+  <section id="pengujian" class="wrap"><h2>Dokumentasi pengujian</h2><div id="testing"></div></section>
+  <section id="pengalaman" class="wrap"><h2>Pengalaman</h2><div id="experience"></div></section>
+  <section id="kontak" class="band"><div class="wrap" id="contact"></div></section>
+</main>
+<footer class="foot"><span id="year"></span> Hafizhah Farah Fadhila</footer>
+<dialog id="modal" aria-label="Studi kasus proyek"><button class="close" id="close" aria-label="Tutup">&times;</button><div id="modal-body"></div></dialog>
+
+<!-- Data per kategori: edit isi di folder js/data/ -->
+<script src="js/data/profile.js"></script>
+<script src="js/data/skills.js"></script>
+<script src="js/data/projects.js"></script>
+<script src="js/data/testing.js"></script>
+<script src="js/data/experience.js"></script>
+<script src="js/data/education.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
