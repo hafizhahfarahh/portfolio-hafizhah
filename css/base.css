@@ -3,7 +3,8 @@
 @font-face{font-family:"Avenir File";src:url("../assets/fonts/avenir-heavy.woff2") format("woff2");font-weight:700}
 :root{
   --navy:#384B70; --cream:#ffffff; --teal:#507687;
-  --surface:#F4F1E1; --line:#DEDAC4; --tint:rgba(80,118,135,.14); --radius:10px;
+  --surface:#F3F6F9; --line:#D9E1E8; --tint:rgba(80,118,135,.12); --radius:10px;
+  --sand:#F6F1E3;
   --font:"Avenir File","Avenir","Avenir Next","Nunito Sans",system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0}
@@ -23,7 +24,7 @@ h3{font-size:1.15rem}
 .btn.alt{background:transparent;color:var(--navy)}
 .btn:hover{background:var(--teal);border-color:var(--teal);color:var(--cream)}
 
-.nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:.7rem 1.25rem;background:rgba(252,250,238,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:.7rem 1.25rem;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .brand{font-weight:800;font-size:1.2rem;text-decoration:none;color:var(--navy)}
 .nav nav{display:flex;gap:1.4rem}
 .nav nav a{text-decoration:none;color:var(--teal);font-weight:700;font-size:.95rem;padding:.2rem 0;border-bottom:2px solid transparent}

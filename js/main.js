@@ -60,10 +60,10 @@ viewer.onclose = () => set("#viewer-body", ""); /* menghentikan video saat ditut
 
 /* Beranda, Tentang */
 const P = PROFILE, C = P.contact;
-set("#beranda", `<div><h1>${P.name}</h1><p class="role">${P.role}</p><p class="tag">${P.tagline}</p><p class="status">${P.status}</p>
+set("#beranda", `<div><h1>${P.name}</h1><p class="role">${P.role}</p><p class="tag">${P.tagline}</p>
   <div class="actions"><a class="btn" href="#proyek">Lihat proyek</a>${P.cv ? `<a class="btn alt" href="${P.cv}" download>Lihat CV</a>` : ""}<a class="btn alt" href="#kontak">Hubungi saya</a></div></div>
   <div class="photo">${img(P.photo, "Foto " + P.name)}</div>`);
-set("#about", `<h3>${P.about.greeting}</h3><p class="lead">${P.about.lead}</p>${li(P.about.paragraphs, p => `<p>${p}</p>`)}</div>`);
+set("#about", `<h3>${P.about.greeting}</h3>${li(P.about.paragraphs, p => `<p>${p}</p>`)}</div>`);
 
 /* Pendidikan */
 const E = EDUCATION;
