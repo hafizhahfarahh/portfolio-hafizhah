@@ -4,7 +4,7 @@ const PROFILE = {
   role: "System Analysis & Quality Assurance",
   tagline: "Memahami kebutuhan, merancang solusi, dan memastikan kualitas sistem melalui analisis dan pengujian.",
   photo: "assets/images/foto-profil.jpg", // taruh foto di assets/images/ lalu tulis namanya di sini
-  cv: "CV_2026.pdf",                       // kosongkan ("") untuk menyembunyikan tombol unduh CV
+  cv: "CV_Hafizhah_Farah_Fadhila.pdf",                       // kosongkan ("") untuk menyembunyikan tombol unduh CV
   about: {
     greeting: "Halo, saya Hafizhah.",
     paragraphs: [
@@ -24,3 +24,8 @@ const PROFILE = {
     github: "https://github.com/hafizhahfarahh"
   }
 };
+/* CV: taruh file PDF di folder utama (sejajar index.html). Kosongkan file ("") untuk menyembunyikan satu kartu. */
+const CV = [
+  { title: "CV Bahasa Indonesia", text: "Pendidikan, pengalaman, proyek, dan keahlian dalam Bahasa Indonesia.", file: "CV_Hafizhah_Farah_Fadhila.pdf" },
+  { title: "CV English", text: "Education, experience, projects, and skills in English.", file: "CV_Hafizhah_Farah_Fadhila_EN.pdf" }
+];

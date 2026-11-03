@@ -166,3 +166,5 @@ td{vertical-align:top}
 .span2{grid-column:span 2}
 @media(max-width:900px){.cols{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.cols{grid-template-columns:1fr}.span2{grid-column:auto}}
+
+.cv .actions{margin-top:1rem}

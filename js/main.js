@@ -61,9 +61,15 @@ viewer.onclose = () => set("#viewer-body", ""); /* menghentikan video saat ditut
 /* Beranda, Tentang */
 const P = PROFILE, C = P.contact;
 set("#beranda", `<div><h1>${P.name}</h1><p class="role">${P.role}</p><p class="tag">${P.tagline}</p>
-  <div class="actions"><a class="btn" href="#proyek">Lihat proyek</a>${P.cv ? `<a class="btn alt" href="${P.cv}" download>Lihat CV</a>` : ""}<a class="btn alt" href="#kontak">Hubungi saya</a></div></div>
+  <div class="actions"><a class="btn" href="#proyek">Lihat proyek</a><a class="btn alt" href="#kontak">Hubungi saya</a></div></div>
   <div class="photo">${img(P.photo, "Foto " + P.name)}</div>`);
 set("#about", `<h3>${P.about.greeting}</h3>${li(P.about.paragraphs, p => `<p>${p}</p>`)}</div>`);
+
+/* CV */
+const cvs = CV.filter(c => c.file);
+$("#cv").hidden = !cvs.length;
+set("#cv-list", cols(cvs, c => `<div class="item cv"><h3>${c.title}</h3><p>${c.text}</p><div class="actions"><button class="btn" data-pid="${reg(c.file)}" data-t="${esc(c.title)}">Lihat</button><a class="btn alt" href="${c.file}" download>Unduh PDF</a></div></div>`));
+
 
 /* Pendidikan */
 const E = EDUCATION;
