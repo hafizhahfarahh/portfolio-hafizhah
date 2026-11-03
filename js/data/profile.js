@@ -20,8 +20,8 @@ const PROFILE = {
   ],
   closing: "Terbuka untuk kesempatan belajar, berkolaborasi, dan berkontribusi di bidang System Analysis maupun Quality Assurance.",
   contact: {
-    email: "hafizhah.fadhila@gmail.com", // periksa kembali alamat email
-    phone: "",                           // contoh: "+62 853-2414-5954" (kosong = tidak ditampilkan)
+    email: "hafizhah.fadhila@gmail.com",
+    phone: "0853-2414-5954",
     linkedin: "https://www.linkedin.com/in/hafizhahfarahfadhila/",
     github: "https://github.com/hafizhahfarahh"
   }

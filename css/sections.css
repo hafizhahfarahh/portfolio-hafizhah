@@ -16,11 +16,12 @@
 /* Tentang */
 #about h3{font-size:1.5rem;margin-bottom:.6rem}
 #about .lead{font-size:1.15rem;font-weight:600;margin-bottom:.8rem}
-#about p{max-width:68ch;margin-bottom:.8rem}
+#about p{max-width:none;margin-bottom:.8rem;text-align:justify}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:1.6rem}
 .fact{padding:1rem 1.2rem;background:var(--navy);color:var(--cream)}
 .fact b{display:block;font-size:1.7rem;font-weight:800}
 .fact span{font-size:.9rem}
+
 
 /* Kompetensi */
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}
@@ -29,6 +30,11 @@
 .chips{display:flex;flex-wrap:wrap;gap:.45rem}
 .chip{padding:.2rem .8rem;border-radius:99px;background:var(--tint);font-size:.88rem;font-weight:600}
 .lang{margin-top:1.4rem}
+.skills{grid-template-columns:repeat(4,1fr);gap:1rem}
+.skill{padding:1.2rem 1.1rem}
+.skill .chip{font-size:.82rem;padding:.2rem .65rem}
+@media(max-width:1000px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.skills{grid-template-columns:1fr}}
 
 /* Proyek */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:1.4rem}
@@ -42,7 +48,7 @@
 .cta{display:inline-block;margin-top:.7rem;font-weight:700;font-size:.92rem;border-bottom:2px solid var(--teal)}
 
 /* Studi kasus (jendela proyek) */
-dialog{border:0;border-radius:var(--radius);padding:0;width:min(900px,94vw);max-height:92vh;overflow:auto;background:var(--cream);color:var(--navy)}
+dialog{margin:auto;border:0;border-radius:var(--radius);padding:0;width:min(900px,94vw);max-height:92vh;overflow:auto;background:var(--cream);color:var(--navy)}
 dialog::backdrop{background:rgba(56,75,112,.65)}
 .close{position:sticky;top:.6rem;float:right;margin:.6rem .6rem -3rem 0;width:40px;height:40px;border-radius:50%;border:0;background:var(--cream);color:var(--navy);font-size:1.5rem;cursor:pointer;z-index:2}
 .case-head{background:var(--navy);color:var(--cream);padding:2rem 1.6rem 1.5rem}
@@ -100,7 +106,8 @@ tr:last-child td{border-bottom:0}
 .band .wrap{padding-bottom:4rem}
 .band h2{color:var(--cream)}
 .band h2::after{background:var(--cream)}
-.band p{max-width:56ch;margin-bottom:1.6rem}
+.band p{max-width:none;margin-bottom:1.6rem}
+@media(min-width:900px){.band p{text-align:justify}}
 .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
 .contact a{display:block;padding:1rem 1.2rem;border:2px solid rgba(252,250,238,.35);border-radius:var(--radius);text-decoration:none;color:var(--cream);overflow-wrap:anywhere}
 .contact a:hover{border-color:var(--cream)}
@@ -112,3 +119,50 @@ tr:last-child td{border-bottom:0}
   .two{grid-template-columns:1fr}
   .cred{grid-template-columns:1fr;gap:.2rem}
 }
+
+/* Tambahan: poin, label, tile di studi kasus */
+.bul{margin:.5rem 0 0 1.2rem;font-size:.97rem}
+.bul li{margin-bottom:.35rem}
+.bul b{font-weight:800}
+.who{font-weight:700;color:var(--navy)!important}
+.lbl{margin:1rem 0 .5rem;font-size:1rem}
+.item .chips{margin-top:.6rem}
+.row .chips{margin-top:.4rem}
+.rows.two{grid-template-columns:1fr 1fr}
+.case-body .facts{margin:0 0 1.8rem}
+.case-sec p{margin-bottom:.6rem}
+@media(max-width:900px){.nav nav{gap:.9rem}.nav nav a{font-size:.88rem}}
+@media(max-width:720px){.rows.two{grid-template-columns:1fr}}
+
+/* Bukti: tombol, chip yang bisa diklik, jendela penampil */
+.proof{margin-left:.5rem;padding:.1rem .75rem;border:1.5px solid var(--teal);border-radius:99px;background:transparent;color:var(--teal);font:700 .82rem var(--font);cursor:pointer;vertical-align:baseline}
+.proof:hover{background:var(--teal);color:var(--cream)}
+.pf{margin-top:.7rem}
+.pf .proof{margin-left:0}
+.banner .proof{color:var(--cream);border-color:var(--cream)}
+.banner .proof:hover{background:var(--cream);color:var(--navy)}
+.proof-chip{font-family:var(--font);color:var(--navy);border:1.5px solid var(--teal);cursor:pointer}
+.proof-chip::after{content:"";display:inline-block;width:6px;height:6px;margin-left:.45rem;border-radius:50%;background:var(--teal)}
+.proof-chip:hover{background:var(--teal);color:var(--cream)}
+.proof-chip:hover::after{background:var(--cream)}
+.hint2{margin-top:.6rem;font-size:.88rem;color:var(--teal)}
+#viewer{width:min(900px,94vw)}
+#viewer-body{padding:1.5rem}
+.vt{font-size:1.1rem;margin:0 2.6rem 1rem 0}
+#viewer-body figure{margin-bottom:1.2rem}
+#viewer-body img{aspect-ratio:auto;object-fit:contain;max-height:78vh;background:var(--surface)}
+.vframe{display:block;width:100%;height:72vh;border:0;border-radius:var(--radius);background:var(--surface)}
+
+table{min-width:1000px}
+th{white-space:nowrap}
+td{vertical-align:top}
+.stp{margin:0 0 0 1.1rem}
+.stp li{margin-bottom:.2rem}
+
+/* Kolom berjajar */
+.cols{display:grid;grid-template-columns:repeat(var(--n,3),1fr);gap:1rem}
+.cols .item,.cols .cred{margin-bottom:0}
+.cols .cred{grid-template-columns:1fr;gap:.2rem}
+.span2{grid-column:span 2}
+@media(max-width:900px){.cols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.cols{grid-template-columns:1fr}.span2{grid-column:auto}}
